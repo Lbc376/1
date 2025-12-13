@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Media as Cultural Power</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #222;
+            background-color: #f5f5f7;
+        }
+        
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        header {
+            background: radial-gradient(circle at top left, #4f46e5, #111827);
+            color: white;
+            padding: 4rem 1.5rem 3rem;
+        }
+        
+        header .inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+        }
+        
+        nav a {
+            color: #e5e7eb;
+            padding: 0.3rem 0.7rem;
+            border-radius: 999px;
+            border: 1px solid rgba(243, 244, 246, 0.3);
+            backdrop-filter: blur(4px);
+        }
+        
+        nav a:hover {
+            background: rgba(243, 244, 246, 0.2);
+        }
+        
+        h1 {
+            font-size: 2.4rem;
+            margin: 0 0 0.5rem;
+        }
+        
+        .subtitle {
+            max-width: 650px;
+            font-size: 1rem;
+            color: #e5e7eb;
+            margin-bottom: 1.5rem;
+        }
+        
+        blockquote {
+            border-left: 3px solid rgba(255, 255, 255, 0.4);
+            margin: 0 0 0.5rem;
+            padding-left: 1rem;
+            font-style: italic;
+            color: #e5e7eb;
+        }
+        
+        .quote-author {
+            font-size: 0.9rem;
+            color: #d1d5db;
+        }
+        
+        main {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem 3rem;
+        }
+        
+        section {
+            background: white;
+            margin-bottom: 2rem;
+            padding: 2rem 1.5rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.07);
+        }
+        
+        section h2 {
+            margin-top: 0;
+            font-size: 1.7rem;
+            color: #111827;
+        }
+        
+        h3 {
+            margin-top: 1.5rem;
+            font-size: 1.2rem;
+            color: #111827;
+        }
+        
+        h4 {
+            margin-top: 1rem;
+            font-size: 1.05rem;
+            color: #111827;
+        }
+        
+        p {
+            margin: 0.4rem 0;
+            font-size: 0.97rem;
+        }
+        
+        ul {
+            margin: 0.2rem 0 0.8rem 1.4rem;
+            padding: 0;
+            font-size: 0.95rem;
+        }
+        
+        li {
+            margin-bottom: 0.3rem;
+        }
+        
+        .pill {
+            display: inline-block;
+            margin-bottom: 0.5rem;
+            padding: 0.1rem 0.6rem;
+            border-radius: 999px;
+            background: #eef2ff;
+            color: #3730a3;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        figure {
+            margin: 1rem 0;
+            background: #f9fafb;
+            border-radius: 12px;
+            padding: 0.8rem;
+            border: 1px dashed #e5e7eb;
+        }
+        
+        figure img {
+            max-width: 100%;
+            display: block;
+            border-radius: 8px;
+            margin-bottom: 0.4rem;
+        }
+        
+        figure figcaption {
+            font-size: 0.85rem;
+            color: #4b5563;
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+            gap: 1.5rem;
+            align-items: flex-start;
+        }
+        
+        .tagline {
+            font-weight: 500;
+            color: #4b5563;
+            font-size: 0.95rem;
+            margin-top: 0.2rem;
+        }
+        
+        .example-label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #6b7280;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 0.5rem;
+        }
+        
+        .reference-list {
+            font-size: 0.9rem;
+            padding-left: 1.1rem;
+        }
+        
+        .reference-list li {
+            margin-bottom: 0.4rem;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 0.85rem;
+            color: #6b7280;
+        }
+        /* ✅ Added: side-by-side comparison block (no conflict with your existing styles) */
+        
+        .compare-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1rem;
+            margin: 0.8rem 0 0.3rem;
+        }
+        
+        .compare-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 0.7rem;
+        }
+        
+        .compare-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+        }
+        
+        .compare-title {
+            margin-top: 0.55rem;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #111827;
+        }
+        
+        .compare-note {
+            margin-top: 0.15rem;
+            font-size: 0.82rem;
+            color: #6b7280;
+        }
+        
+        @media (max-width: 800px) {
+            header {
+                padding-top: 3rem;
+            }
+            h1 {
+                font-size: 1.95rem;
+            }
+            .two-column {
+                grid-template-columns: minmax(0, 1fr);
+            }
+            section {
+                padding: 1.4rem 1rem;
+            }
+            /* ✅ Added: make side-by-side stack on mobile */
+            .compare-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="inner">
+            <nav>
+                <a href="#intro">Intro</a>
+                <a href="#foundations">Technical Foundations</a>
+                <a href="#convergence">Convergence Culture</a>
+                <a href="#cultural-forms">Cultural Forms</a>
+                <a href="#immersive">Immersive Experience</a>
+                <a href="#mediated-place">Mediated Place</a>
+                <a href="#references">References</a>
+            </nav>
+
+            <h1>Digital Media as Cultural Power</h1>
+            <p class="subtitle">
+                How digitality, convergence, participation, and mediated place reconfigure culture, society, and politics. This site combines conceptual explanation with concrete examples and visual suggestions.
+            </p>
+
+            <blockquote>“The medium is the message.”</blockquote>
+            <div class="quote-author">— Marshall McLuhan</div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- INTRO -->
+        <section id="intro">
+            <span class="pill">Overview</span>
+            <h2>1. Introduction: Why Treat Digital Media as Cultural Power?</h2>
+
+            <div class="two-column">
+                <div>
+                    <p>
+                        Digital media are no longer just tools for entertainment or information. They shape how we see the world, how we relate to each other, how we understand politics, and even how we imagine what is real. When media become digital, networked, and interactive,
+                        they gain a special kind of “cultural power.”
+                    </p>
+                    <p>
+                        This site introduces four interconnected lenses for understanding that power:
+                    </p>
+                    <ul>
+                        <li><strong>Digitality</strong> – media encoded as data, endlessly copied, remixed, and personalized.</li>
+                        <li><strong>Convergence</strong> – the blending of technologies, industries, and audience practices.</li>
+                        <li><strong>Participation</strong> – users as creators, curators, and collaborators, not just consumers.</li>
+                        <li><strong>Mediated Place</strong> – digital layers that transform how we inhabit and make sense of space.</li>
+                    </ul>
+                    <p>
+                        Across the sections, we move from technical foundations to cultural forms, immersive experiences, and the ways digital media re-write the meaning of “place”. Each concept is paired with concrete examples from platforms, popular culture, and digital art.
+                    </p>
+                </div>
+                <div>
+                    <figure>
+                        <img src="/1/1.jpg" alt="Diagram of interconnected devices, platforms, and users forming a digital media ecosystem." />
+                        <figcaption>
+                            We might use a simple ecosystem diagram showing devices (phones, laptops), platforms (apps), and users connected in a dense web of arrows. Such an image helps us see digital media not as isolated tools, but as part of a complex sociotechnical network.
+                            By emphasizing circulation rather than single messages, this visual sets up the idea of media as an ongoing process rather than a finished product.
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOUNDATIONS -->
+        <section id="foundations">
+            <span class="pill">Technical Foundations</span>
+            <h2>2. Technical Foundations of Digital Media</h2>
+
+            <h3>2.1 Digitality & Numerical Representation</h3>
+            <p>
+                Digital media are built from binary code — streams of 0s and 1s. This numerical representation makes texts, images, sounds, and videos infinitely copyable, editable, and recombinable. A photograph becomes not a fixed object but a malleable data set that
+                can be compressed, filtered, enhanced, or fully re-generated by AI.
+            </p>
+            <p>
+                Walter Benjamin famously argued that mechanical reproduction weakens the “aura” of the unique artwork. In the age of digital reproduction, this logic is pushed even further: many cultural objects are born without an original. A meme, an AI-generated image,
+                or a digital collage may circulate thousands of times without any stable, primary source.
+            </p>
+
+            <!-- ✅ ADDED: Cat comparison (cat.png vs cat2.png) + analysis -->
+            <figure>
+                <div class="compare-grid">
+                    <div class="compare-card">
+                        <img src="/1/cat.png" alt="cat.png (original photo)" />
+                        <div class="compare-title">Figure 2.1A — cat.png (photographic capture)</div>
+                        <div class="compare-note">A relatively “ordinary” image that looks like a direct record of a moment.</div>
+                    </div>
+                    <div class="compare-card">
+                        <img src="/1/cat2.png" alt="cat2.png (digitally transformed)" />
+                        <div class="compare-title">Figure 2.1B — cat2.png (digitally transformed)</div>
+                        <div class="compare-note">A stylized version where texture, color, and surface become adjustable variables.</div>
+                    </div>
+                </div>
+                <figcaption>
+                    Cat comparison (cat.png vs cat2.png): the same subject can be re-authored through computational transformations, showing how digital images become editable data rather than fixed objects.
+                </figcaption>
+            </figure>
+
+            <ul>
+                <li>
+                    When we place cat.png and cat2.png side by side, we can see how numerical representation turns a photograph into a set of adjustable parameters. In cat.png, the cat reads as a captured moment—lighting, color, and texture feel “given” by the scene. In
+                    cat2.png, those same visual qualities are no longer treated as natural facts; they become choices that can be pushed, stylized, or exaggerated. This is a key feature of digital media: the image is not only recorded, but continuously
+                    re-writable.
+                </li>
+                <li>
+                    This comparison also helps us think about authenticity in everyday media. cat2.png still looks recognizable, yet its “look” is clearly produced through processing rather than through the camera alone. The transformation shows how digital platforms normalize
+                    aesthetic optimization—filters, enhancement, and stylization become routine steps in representing the self and the world. As a result, what feels “real” online may increasingly be the version that has been curated and computed.
+                </li>
+                <li>
+                    Finally, the pair shows how cultural meaning can shift through visual manipulation. cat.png may suggest intimacy and domestic reality, while cat2.png feels more like an art object or a shareable aesthetic artifact. This difference matters because cultural
+                    power in digital media often depends on circulation: images that fit platform aesthetics tend to travel further. The ability to transform ordinary life into a stylized, attention-ready image is part of how digitality reorganizes what
+                    becomes visible, valued, and memorable.
+                </li>
+            </ul>
+
+            <!-- ✅ ADDED: Mona Lisa (6.jpg) vs AI (7.png) + analysis -->
+            <figure>
+                <div class="compare-grid">
+                    <div class="compare-card">
+                        <img src="/1/6.jpg" alt="6.jpg (Mona Lisa original)" />
+                        <div class="compare-title">Figure 2.1C — 6.jpg (canonical “original” image)</div>
+                        <div class="compare-note">Historically anchored authorship and institutional cultural authority.</div>
+                    </div>
+                    <div class="compare-card">
+                        <img src="/1/ChatGPT Image .png" alt=" (AI-generated portrait)" />
+                        <div class="compare-title">Figure 2.1D — 7.png (AI-generated Renaissance-style portrait)</div>
+                        <div class="compare-note">A synthetic image that performs “Renaissance style” through learned visual patterns.</div>
+                    </div>
+                </div>
+                <figcaption>
+                    Mona Lisa vs AI: a classic artwork’s “aura” and authorship meet a world where style can be generated, iterated, and circulated at scale.
+                </figcaption>
+            </figure>
+
+            <ul>
+                <li>
+                    Comparing the Mona Lisa (6.jpg) with an AI-generated Renaissance-like portrait (7.png) makes digitality visible at the level of cultural authority. The Mona Lisa carries value not only because of how it looks, but because of its historical anchoring:
+                    a named author, a specific time, and institutional validation through museums, scholarship, and tourism. In contrast, 7.png can resemble the “same” cultural mood—soft lighting, balanced composition, and the famous “mysterious smile”
+                    effect—without any single origin story in art history.
+                </li>
+                <li>
+                    This contrast helps us revisit Benjamin’s idea of aura. The Mona Lisa’s aura is tied to singularity and presence: the sense that there is one authentic object that cannot be fully replaced. But the AI image suggests a different media condition, where
+                    “Renaissance-ness” becomes a reproducible aesthetic template. If platforms can generate thousands of portraits that feel “museum-like,” then uniqueness is no longer guaranteed by appearance alone, and cultural value becomes more contested
+                    and re-negotiated.
+                </li>
+                <li>
+                    At the same time, the pairing shows how style becomes computable. The AI portrait is not copying one specific painting; it is recombining learned patterns from large datasets to produce a new image that fits our expectations of “classical art.” This matters
+                    culturally because it shifts power from institutions (who own originals) toward infrastructures (who own models, datasets, and distribution platforms). In a digital media environment, what counts as “artistic” can increasingly be shaped
+                    by algorithmic production and platform visibility, not only by tradition and authorship.
+                </li>
+            </ul>
+
+            <h3>2.2 Networked Media & Many-to-Many Communication</h3>
+            <p>
+                Digital media are deeply networked. Unlike broadcast television or print, the internet allows many-to-many communication: large numbers of users can create, share, and respond to content with minimal cost.
+            </p>
+            <p>
+                Network connections are not neutral wires. They channel attention, form communities, and enable new power dynamics. A rumor on a group chat, a hashtag on X, or a viral TikTok can spread faster than traditional news, sometimes correcting it, sometimes
+                undermining it.
+            </p>
+
+            <figure>
+                <img src="/1/8.png" alt="Timeline collage showing how eyewitness smartphone video circulates on social media before official news coverage." />
+                <figcaption>
+                    Figure 2.2 — Networked circulation timeline: eyewitness capture → social posting → breaking amplification → official statement.
+                </figcaption>
+            </figure>
+
+            <div class="example-label">Example analysis (expanded):</div>
+            <ul>
+                <li>
+                    This example illustrates a central feature of <strong>networked media</strong>: public visibility can emerge through circulation rather than waiting for a single institutional “gatekeeper.” An eyewitness recording converts a physical
+                    event into a portable digital file, and the ease of copying and transmission allows that file to move rapidly across accounts, platforms, and group chats. A key cultural consequence is that <strong>speed</strong> becomes a form of
+                    power: what counts as “known” can be shaped by circulation patterns as much as by editorial schedules.
+                </li>
+
+                <li>
+                    The escalation from an initial post to a “breaking” frame highlights how visibility is produced through <strong>participation</strong>. A clip becomes socially meaningful because others share it, repost it, comment on it, and frame
+                    it with urgency. In course terms, this reflects <strong>participatory culture</strong>: users function as distributors and interpreters who help assign meaning. At the same time, participation can reward emotional intensity, because
+                    “breaking” formats are designed to accelerate attention and engagement.
+                </li>
+
+                <li>
+                    The later arrival of an official statement helps explain <strong>convergence</strong> in practice: older institutions (broadcast media, government communication) increasingly operate inside an environment already structured by platform
+                    circulation. Instead of setting the first narrative, institutional actors often respond to what has already spread, attempting to re-stabilize meaning with authority and verification. This raises a power question at the heart of networked
+                    communication: whose version counts as truth, which clips get amplified, and which voices remain unseen.
+                </li>
+
+                <li>
+                    Finally, the timeline logic encourages a <strong>hypertext-like</strong> understanding of events: the “story” is assembled from connected nodes (capture → post → amplify → respond) rather than delivered as a single linear broadcast.
+                    This aligns with the broader claim of the course: digital media do not merely report events, they <strong>reshape the conditions</strong> under which events become visible, debatable, and politically meaningful.
+                </li>
+            </ul>
+
+            <figure>
+                <img src="/1/2.png" alt="Broadcast model vs networked media model" />
+                <figcaption>
+                    A visual comparison of broadcast vs. networked media: on the left, one-to-many arrows from a central source; on the right, many interconnected nodes representing users and platforms. This kind of diagram helps us imagine how the architecture of communication
+                    affects who can speak and who is heard.
+                </figcaption>
+            </figure>
+
+            <h3>2.3 Interactivity & User Agency</h3>
+            <p>
+                In digital environments, audiences interact with media rather than simply receiving it. Interactivity ranges from clicking and scrolling to co-creating content, voting in live streams, and shaping storylines in interactive narratives.
+            </p>
+            <p>
+                Interactivity also reshapes power: platforms invite participation but often capture the resulting data. Users gain voice, but their behavior is tracked, quantified, and monetized. Agency and capture coexist.
+            </p>
+
+            <figure>
+                <img src="/1/9.png" alt="Bilibili video with dense danmu comments overlaid on the screen" />
+                <figcaption>
+                    Figure 2.3 — Interactivity through danmu: viewer comments appear directly on the video image, turning individual watching into a shared, layered experience.
+                </figcaption>
+            </figure>
+
+            <div class="example-label">Example analysis (expanded):</div>
+            <ul>
+                <li>
+                    This example demonstrates a distinctive mode of <strong>interactivity</strong>: danmu (bullet comments) reconfigure viewing into a shared, time-layered encounter. Instead of being separated from the content, audience responses become
+                    part of the experience itself. The media text is therefore not a fixed object delivered from creator to viewer, but a continuously evolving surface shaped by collective participation. Watching becomes simultaneously a practice of reading,
+                    reacting, and anticipating others’ reactions.
+                </li>
+
+                <li>
+                    The repeated short phrases of encouragement show how <strong>user agency</strong> operates at a micro level. Individual contributions may be brief, but together they generate a strong affective atmosphere—shared anxiety, shared motivation,
+                    and a sense of “being with others” even when viewers are physically separate. In course terms, interactivity does not only enable information exchange; it also produces emotional publics and shared interpretive frames.
+                </li>
+
+                <li>
+                    The same participatory layer can also be understood as a form of data production. Comments, timing, density, and engagement patterns are stored and processed, feeding into ranking systems and recommendation logics. This makes the case useful for discussing
+                    a key tension of platform life: interactivity can feel empowering while also being enrolled into commercial and computational systems of measurement and prediction.
+                </li>
+
+                <li>
+                    Finally, interactivity reshapes perception itself. When attention must be distributed across multiple voices at once, comprehension becomes fragmented yet collective. Compared with broadcast media—where viewers remain silent and invisible—this structure
+                    makes participation visible and consequential, demonstrating how digital media reorganize both communication and the sensory conditions of interpretation.
+                </li>
+            </ul>
+
+            <h3>2.4 Hypertextuality & Nonlinear Navigation</h3>
+            <p>
+                Hypertext allows texts to be linked together in non-linear ways. Clicking a link moves the reader sideways across the network rather than straight ahead. In a hypertextual environment, reading becomes navigation.
+            </p>
+            <p>
+                Hypertext also blurs boundaries between readers and writers: users constantly annotate, tag, remix, and comment. Knowledge production becomes distributed across many small contributions.
+            </p>
+
+            <figure>
+                <img src="/1/10.png" alt="Mock news homepage showing hyperlinks, tags, related recommendations, and an arrowed reading path." />
+                <figcaption>
+                    Figure 2.4 — Hypertext in action: headlines, tags, and “Related/Recommended” modules create a guided reading path across topics.
+                </figcaption>
+            </figure>
+
+            <div class="example-label">Example analysis (expanded):</div>
+            <ul>
+                <li>
+                    This example clarifies <strong>hypertextuality</strong> by showing how online reading functions as movement across connected nodes rather than a single linear sequence. Headlines, tags, and recommendation modules invite sideways jumps,
+                    meaning that “making sense” increasingly involves navigation—selecting pathways, following associations, and assembling understanding across linked fragments.
+                </li>
+
+                <li>
+                    A headline can be understood as a gateway into a larger network rather than a complete message. Once a reader enters, the interface typically encourages continued movement to adjacent items rather than sustained attention to a single text. This illustrates
+                    a broader platform tendency: attention is organized through pathways, not only through standalone stories.
+                </li>
+
+                <li>
+                    Tags operate as thematic shortcuts that bundle texts into topic trails. They appear to expand choice by enabling exploration, yet they also classify the world into platform-readable categories. Hypertext therefore expands routes through information while
+                    simultaneously shaping which connections feel legitimate, obvious, or worth following.
+                </li>
+
+                <li>
+                    Recommendation modules make the power dimension of hypertext especially visible. “What comes next” is not merely discovered; it is engineered through ranking, editorial design, and platform priorities. This means the “natural” reading path is partly constructed:
+                    the interface nudges some associations forward while others remain hidden or costly to reach. Hypertext enables freedom to jump, but it also <strong>codes guidance into the interface</strong>.
+                </li>
+
+                <li>
+                    Culturally and politically, hypertext reshapes how issues become connected in public life. Readers encounter news as a web of linked frames rather than a single authoritative narrative. This can broaden perspective by connecting stories across categories,
+                    but it can also narrow perspective if recommendation systems repeatedly reinforce similar angles. Hypertext thus functions as cultural power by shaping not only what is read, but the <strong>pathways through which ideas become connected</strong>.
+                </li>
+            </ul>
+
+            <h3>2.5 Automation, Algorithms, and Databases</h3>
+            <p>
+                Digital media systems rely on databases and algorithmic filtering. Platforms like TikTok, Instagram, and Netflix store enormous catalogs of content and use recommendation engines to decide what each person sees.
+            </p>
+            <p>
+                Algorithms are not neutral; they encode institutional priorities and commercial goals. They amplify some voices and suppress others, shaping our sense of what is normal, trending, or important. As some critics argue, we risk becoming “captured” by endless
+                loops of content that are pleasurable but politically shallow.
+            </p>
+
+            <figure>
+                <img src="/1/11.png" alt="TikTok interface showing algorithmic feed, engagement metrics, and automated recommendation system." />
+                <figcaption>
+                    Figure 2.5 — Automation and algorithmic curation on TikTok: personalized feeds, engagement metrics, and database-driven visibility.
+                </figcaption>
+            </figure>
+
+            <div class="example-label">Example analysis (expanded):</div>
+            <ul>
+                <li>
+                    This example foregrounds how <strong>automation</strong> organizes everyday media experience. The interface can feel simple and effortless, yet the ordering of content, the pacing of exposure, and the selection of “what comes next”
+                    are largely produced through automated systems. Automation reduces friction and effort, making consumption feel continuous and natural—precisely because decision-making is partially delegated to the platform.
+                </li>
+
+                <li>
+                    <strong>Algorithms</strong> translate interaction into signals: likes, comments, watch time, replays, and shares become data points used to predict what will hold attention. What feels like organic discovery is therefore inseparable
+                    from probabilistic ranking and prediction. In practice, cultural visibility is increasingly organized by what is measurable and what is likely to retain attention.
+                </li>
+
+                <li>
+                    <strong>Databases</strong> provide the underlying infrastructure: each video is an entry among millions, constantly compared and re-ranked. Content that performs well is circulated more widely, while content that fails to generate
+                    engagement becomes less visible. Cultural power here is not only about expression, but about how database-driven systems reward particular affective tones, narrative formats, and stylistic patterns.
+                </li>
+
+                <li>
+                    This example also clarifies how automation reshapes agency. Users can scroll freely, yet their experience is structured by algorithmic prediction, which can stabilize preferences and narrow what feels relevant or imaginable. Personalization offers convenience,
+                    but it can also reduce exposure to difference by repeatedly reinforcing familiar moods and topics.
+                </li>
+
+                <li>
+                    Finally, algorithmic curation functions as a form of <strong>cultural governance</strong>. Decisions about which narratives appear, which issues become prominent, and which voices gain visibility are filtered through platform logics
+                    that prioritize retention and engagement. Automation does not merely organize content; it actively shapes what becomes collectively visible and culturally meaningful.
+                </li>
+            </ul>
+
+        </section>
+
+        <!-- CONVERGENCE -->
+        <section id="convergence">
+            <span class="pill">Convergence Culture</span>
+            <h2>3. Convergence, Participation, and Collective Intelligence</h2>
+
+            <h3>3.1 What Is Convergence Culture?</h3>
+            <p>
+                Convergence is more than a technological trend. It describes a cultural shift in which stories, images, and meanings flow across multiple platforms, and audiences follow them actively. Old and new media coexist, intersect, and compete for attention.
+            </p>
+            <p class="tagline">
+                Henry Jenkins suggests that convergence happens both in the infrastructure of media industries and in the minds of users who stitch diverse fragments into meaningful narratives.
+            </p>
+
+            <h3>3.2 Bert–Bin Laden: A Grassroots Icon Meets Global News</h3>
+            <p>
+                A famous example of convergence involves a manipulated image of a Sesame Street character, Bert, standing next to Osama bin Laden. Originally created as a subcultural joke, the image travelled online and was eventually reproduced by a news outlet covering
+                a street protest — apparently without understanding its origin.
+            </p>
+            <p>
+                This incident dramatizes how grassroots media production feeds into professional journalism. It also shows how convergence can generate misunderstandings: symbols circulate faster than their contexts.
+            </p>
+
+            <figure>
+                <div class="compare-grid">
+                    <div class="compare-card">
+                        <img src="/1/12.png" alt="12.png — authoritative explanation of the term 典" />
+                        <div class="compare-title">Figure 3.2A — “典” as an authoritative cultural term</div>
+                        <div class="compare-note">
+                            The term appears in dictionaries and reference texts, associated with classics, institutions, and historical authority.
+                        </div>
+                    </div>
+                    <div class="compare-card">
+                        <img src="/1/13.png" alt="13.png — ironic online usage of the term 典" />
+                        <div class="compare-title">Figure 3.2B — “你太典了” as an online ironic expression</div>
+                        <div class="compare-note">
+                            The same term circulates on the internet as a sarcastic or playful comment, often detached from its original meaning.
+                        </div>
+                    </div>
+                </div>
+                <figcaption>
+                    From authoritative concept to ironic meme: the term “典” shifts meaning as it travels across media contexts, illustrating cultural convergence in everyday language.
+                </figcaption>
+            </figure>
+
+            <ul>
+                <li>
+                    This example makes convergence visible in everyday language. In formal reference systems, “典” functions as a stable concept associated with classics, institutions, and historical authority. Its legitimacy is supported by dictionaries, scholarship, and
+                    cultural tradition, which tend to fix meaning and limit reinterpretation.
+                </li>
+                <li>
+                    In participatory online spaces, the same term is recontextualized as a social signal—often used ironically or sarcastically (e.g., “你太典了”). Meaning becomes more flexible and situational, shaped by platform vernaculars, meme logics, and interpersonal positioning
+                    rather than institutional authority.
+                </li>
+                <li>
+                    This shift parallels the Bert–Bin Laden case: as symbols travel across media contexts, they can detach from their original communities and acquire new, sometimes unintended narratives. Convergence is therefore not just distribution; it is the ongoing
+                    reattachment of meaning to new audiences and new interpretive frames.
+                </li>
+                <li>
+                    The broader cultural point is that convergence often reduces contextual control. Once a concept enters networked circulation, it becomes available for parody, resistance, and playful remix. Authority weakens while recognizability increases, producing
+                    a tension between stability (institutional meaning) and mobility (platform meaning). This tension is a key mechanism of digital cultural power.
+                </li>
+            </ul>
+
+            <h3>3.3 Transmedia Storytelling</h3>
+            <p>
+                Transmedia storytelling refers to narratives that unfold across multiple platforms, with each medium contributing something distinct to the overall storyworld. It encourages audiences to move between films, games, novels, social media accounts, and fan
+                projects.
+            </p>
+            <div class="example-label">Examples (expanded):</div>
+            <ul>
+                <li>
+                    We can map the Marvel Cinematic Universe by drawing a web of films, streaming series, and tie-in comics that share characters and story arcs. Arrows can indicate where a plotline starts in one movie and continues in another medium, inviting viewers to
+                    follow the thread across multiple texts. This diagram illustrates that fans are not simply consuming isolated products, but actively piecing together a larger narrative puzzle from interconnected media objects.
+                </li>
+                <li>
+                    We might also sketch an ecosystem for Pokémon that begins with early Game Boy titles and expands outward toward anime episodes, trading cards, merchandise, mobile AR games, and fan communities. Each branch shows how new media forms introduce fresh regions,
+                    species, or mechanics that deepen the world. The visual emphasizes that transmedia storytelling sustains a franchise as a living, evolving universe, inviting ongoing exploration rather than one-time consumption.
+                </li>
+            </ul>
+
+            <figure>
+                <img src="/1/3.webp" alt="Marvel and Pokémon transmedia diagram" />
+                <figcaption>
+                    Side-by-side maps of the Marvel and Pokémon transmedia universes, with arrows linking films, games, series, and fan spaces. This representation helps us see convergence not only as industrial strategy, but as a storytelling technique.
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img src="/1/14.jpg" alt="Marvel Cinematic Universe cumulative worldwide box office chart (2008–2017) with film icons along a rising line." />
+                <figcaption>
+                    Figure 3.3 — MCU as a convergent media system: cumulative growth suggests value and meaning are produced through interconnected releases, not isolated films.
+                </figcaption>
+            </figure>
+
+            <div class="example-label">Example analysis (expanded):</div>
+            <ul>
+                <li>
+                    This example frames the Marvel Cinematic Universe (MCU) as a system of accumulation rather than a collection of stand-alone products. Cumulative growth suggests that each release amplifies the next by sustaining attention, renewing interest, and extending
+                    the storyworld across time. The franchise functions like a linked network: continuity makes the whole more valuable than any single entry.
+                </li>
+
+                <li>
+                    From the perspective of <strong>convergence culture</strong>, audiences are encouraged to follow characters and plotlines across multiple touchpoints. Even when the focus is cinema, the MCU’s coherence depends on a wider ecosystem—trailers,
+                    post-credit scenes, streaming spin-offs, fan discussions, and recaps—that keeps the narrative active between releases. Convergence here is cultural: viewers stitch fragments into a larger interpretive whole.
+                </li>
+
+                <li>
+                    The case also clarifies a <strong>transmedia</strong> logic: each new installment can introduce hooks that later reappear elsewhere, inviting fans to trace connections like a puzzle. This turns spectatorship into an ongoing practice
+                    of interpretation—tracking timelines, anticipating crossovers, and producing community knowledge—so that consumption becomes intertwined with participation.
+                </li>
+
+                <li>
+                    Finally, this kind of franchise dominance raises a critical question about cultural power. When convergent universes capture massive attention over long periods, they can set expectations for “successful” storytelling—shared universes, serial continuity,
+                    and perpetual expansion—while crowding out smaller narratives and alternative aesthetics. Convergence therefore shapes not only entertainment, but the visibility and value structure of popular culture.
+                </li>
+            </ul>
+
+            <h3>3.4 Participatory Culture</h3>
+            <p>
+                In a participatory culture, people do not simply consume media; they create, annotate, remix, and share it. Barriers to entry are relatively low, informal mentorship is common, and participants feel that their contributions matter.
+            </p>
+            <p>
+                Participatory culture can empower young people to learn skills, build networks, and experiment with new identities. At the same time, it relies heavily on commercial platforms that transform participation into data and profit.
+            </p>
+
+            <figure>
+                <img src="/1/14.png" alt="Platform homepage showing a grid of user-generated video thumbnails with titles, durations, and view counts." />
+                <figcaption>
+                    Figure 3.4C — Platform-scale participatory culture: user-generated videos organized, compared, and circulated through a shared interface.
+                </figcaption>
+            </figure>
+
+            <div class="example-label">Examples (expanded):</div>
+            <ul>
+                <li>
+                    This example demonstrates participatory culture at scale: cultural production is widely distributed rather than limited to professionals. Individual creators contribute to a shared media environment where making, uploading, remixing, and sharing become
+                    normal social practices. Participation is therefore not an exception; it is an everyday mode of cultural presence.
+                </li>
+
+                <li>
+                    At the same time, participation is structured and evaluated through platform feedback. Visibility metrics (views, rankings, comparative placement) function as signals about what is rewarded. Creators learn to interpret these signals and adjust titles,
+                    thumbnails, pacing, and themes to gain attention. Participation thus becomes a negotiated process shaped by platform incentives rather than purely personal expression.
+                </li>
+
+                <li>
+                    The broader implication is that participatory culture is both empowering and constrained. Users contribute meaningfully, yet their reach depends on platform rules, competitive dynamics, and algorithmic sorting. Participation is encouraged, but it is also
+                    unevenly amplified, reminding us that cultural power is exercised through infrastructures that organize who gets seen and remembered.
+                </li>
+            </ul>
+
+            <h3>3.5 Collective Intelligence</h3>
+            <p>
+                Collective intelligence describes the ability of distributed groups to pool their knowledge and solve problems together. Online platforms provide technical infrastructures for such collaboration but do not automatically guarantee fairness or accuracy.
+            </p>
+
+            <figure>
+                <img src="/1/15.webp" alt="Forum discussion illustration showing people collaborating, sharing ideas, and solving problems together." />
+                <figcaption>
+                    Figure 3.5B — A forum-style collaboration scene: many participants contribute ideas, debate interpretations, and gradually build a shared solution.
+                </figcaption>
+            </figure>
+
+            <div class="example-label">Examples (expanded):</div>
+            <ul>
+                <li>
+                    This example clarifies the social logic of collective intelligence: knowledge emerges from many partial contributions rather than from a single expert. Participants bring different kinds of expertise—background facts, lived experience, practical tactics,
+                    or critical questions—and a solution is assembled through revision, clarification, and accumulation over time.
+                </li>
+
+                <li>
+                    Collective intelligence depends on both technology and norms. Platforms enable replies, quoting, search, and cross-referencing, but the quality of outcomes relies on practices of verification, citation, and correction. Without shared standards of critique,
+                    the same infrastructure can amplify rumors rather than insight. Collaboration is therefore an ongoing process of coordination and disagreement, not automatic consensus.
+                </li>
+
+                <li>
+                    The case also invites attention to power and inequality inside “open” collaboration. Some voices become more visible through reputation, moderation, or popularity; others are ignored or dismissed. Collective intelligence is thus not automatically fair:
+                    authority, trust, and visibility shape what counts as shared knowledge and which interpretations dominate.
+                </li>
+            </ul>
+
+        </section>
+
+        <!-- CULTURAL FORMS -->
+        <section id="cultural-forms">
+            <span class="pill">Cultural Forms</span>
+            <h2>4. Cultural Forms in the Digital Age</h2>
+
+            <h3>4.1 Aura Loss & Copy Culture</h3>
+            <p>
+                For Benjamin, the “aura” of an artwork is tied to its uniqueness, physical presence, and connection to a specific time and place. Digital media undermine this aura: files can be copied perfectly and infinitely, with no necessary link to an original.
+            </p>
+            <p>
+                Copy culture can democratize access to art and information, but it also raises pressing questions about authorship, ownership, and authenticity. When a deepfake video or AI-generated artwork circulates widely, viewers must decide what counts as “real”
+                and what counts as “fake” — often in high-stakes contexts.
+            </p>
+            <figure class="example-figure">
+                <img src="/1/15.jpg" alt="AI face swap and deepfake demonstration on news media" />
+                <figcaption>
+                    Figure 4.1 — AI face-swapping technology demonstrated in news coverage, showing facial alignment points and a convincingly altered video portrait.
+                </figcaption>
+            </figure>
+
+            <div class="example-label">Example (expanded):</div>
+            <ul>
+                <li>
+                    This example shows how digital copy culture extends beyond reproduction into the manipulation of identity itself. Facial alignment systems reduce a face to measurable data points, making expressions and movements transferable across bodies and contexts.
+                    Once translated into numerical form, identity becomes technically editable rather than securely anchored in a unique physical presence.
+                </li>
+                <li>
+                    Benjamin’s concept of aura becomes more radical here: if mechanical reproduction weakened uniqueness, AI-based synthesis can undermine authenticity altogether. A recognizable face on screen no longer guarantees that the person is truly present, speaking,
+                    or authoring the message. The “original” is no longer a stable reference point for truth.
+                </li>
+                <li>
+                    The broader implication is epistemic: minimal input data can generate convincing outputs, challenging long-standing assumptions about video as evidence. Visual realism becomes easier to produce than verification, which shifts cultural trust away from
+                    “seeing” toward contextual validation, institutional checks, and collective scrutiny.
+                </li>
+                <li>
+                    Culturally, this case highlights how copy culture reshapes power. When faces and voices can be duplicated and reassigned, authenticity becomes a social and political negotiation rather than a property of the image itself. Aura, once grounded in originality,
+                    increasingly depends on context, provenance, and verification practices.
+                </li>
+            </ul>
+
+            <h3>4.2 Rhizomes and Meme Ecologies</h3>
+            <p>
+                Deleuze and Guattari use the metaphor of the rhizome — an underground stem that spreads horizontally — to describe non-hierarchical, networked forms of growth. Digital culture often follows rhizomatic patterns: memes and jokes travel across contexts,
+                mutate, and recombine without a single center.
+            </p>
+            <p>
+                The “Doge” and “Cheems” ecosystem is a good example. A simple image of a Shiba Inu dog spawned countless variations, spin-offs, and hybrid memes, each with its own micro-context and niche community. No one owns the meme, yet millions participate in its
+                evolution.
+            </p>
+            <figure class="example-figure">
+                <img src="/1/16.webp" alt="Large grid of Wojak meme variations showing many facial expressions and styles" />
+                <figcaption>
+                    Figure 3.X — A large collection of Wojak meme variations, displaying hundreds of stylistic and emotional mutations of the same basic face.
+                </figcaption>
+            </figure>
+
+            <div class="example-label">Examples (expanded):</div>
+            <ul>
+                <li>
+                    This example clarifies how meme templates function as open cultural resources rather than finished works. A shared base form becomes a platform for countless small interventions—changes in expression, accessories, context, and tone—so that variation rather
+                    than originality becomes the dominant creative mode.
+                </li>
+                <li>
+                    The rhizome metaphor is useful here because cultural growth spreads horizontally, without a single authoritative center or endpoint. No single version can be treated as “the” original in a stable sense; meaning emerges through circulation, mutation, and
+                    recombination across different communities and moments.
+                </li>
+                <li>
+                    This also demonstrates collective authorship: value lies in recognizability and adaptability. Memes operate as shared language, allowing communities to express identities, emotions, or political positions while remaining instantly legible to insiders.
+                </li>
+                <li>
+                    Finally, the case shows how platforms encourage modular creativity. Small edits can generate new iterations that circulate independently, reinforcing the idea that digital meaning is produced through repetition-with-difference and through the social life
+                    of templates.
+                </li>
+            </ul>
+
+            <h3>4.3 Viral Circulation and Platform Logics</h3>
+            <p>
+                Digital platforms are optimized for virality. Algorithms tend to surface content that triggers strong emotional reactions, encourages quick engagement, and keeps users scrolling. As a result, “going viral” becomes both a metric of success and a cultural
+                fantasy.
+            </p>
+            <p>
+                Viral circulation can amplify marginalized voices and urgent causes. It can also spread misinformation, harassment, and superficial trends. The same mechanisms that support grassroots visibility can produce new forms of inequality and burnout.
+            </p>
+            <div class="example-label">Examples (expanded):</div>
+
+            <figure>
+                <img src="/1/17.png" alt="Xiaohongshu search results for Zhuhai Sun & Moon Bay Opera House" />
+                <figcaption>
+                    Viral image circulation on Xiaohongshu: repeated visual templates of the Sun & Moon Bay Opera House across user-generated posts.
+                </figcaption>
+            </figure>
+
+            <ul>
+                <li>
+                    This example demonstrates how viral circulation often spreads recognizable templates rather than unique originals. When many creators reproduce similar angles, poses, and lighting styles, visibility becomes tied to aesthetic legibility—formats that “fit”
+                    platform tastes travel further. Virality therefore tends to standardize what is seen, even while it appears to amplify variety.
+                </li>
+                <li>
+                    Platform design reinforces this logic by organizing content into genre pathways (e.g., photos, check-in spots, night views). These categories act as soft instructions about what kinds of images are expected and rewarded. Instead of open-ended exploration,
+                    users are nudged toward a narrow set of shareable visual conventions that keep circulating because they perform well.
+                </li>
+                <li>
+                    Viral logic also spills into physical behavior. When visitors arrive already knowing where to stand and what to shoot, places become stages for reproducing platform-approved images. In this sense, virality does not only spread content online; it reshapes
+                    how people move through environments, how they perform experience, and how places become memorable through repeating visual scripts.
+                </li>
+            </ul>
+
+        </section>
+
+        <!-- IMMERSIVE EXPERIENCE -->
+        <section id="immersive">
+            <span class="pill">Immersive Experience</span>
+            <h2>5. Immersive Digital Experiences and Hyperreality</h2>
+
+            <h3>5.1 Telepresence: Being There from a Distance</h3>
+            <p>
+                Telepresence refers to the feeling of being present in a distant or virtual space. Video conferencing, live streams, and real-time gaming sessions allow people to interact across continents as if they shared the same room.
+            </p>
+            <p>
+                These technologies reshape work, education, and intimacy. A Zoom classroom can approximate the rhythms of face-to-face teaching, but it also highlights inequalities in bandwidth, devices, and domestic conditions.
+            </p>
+            <figure>
+                <img src="/1/19.png" alt="Dual-teacher remote classroom scenario illustrating telepresence in education" />
+                <figcaption>
+                    Dual-teacher classroom scenario: the teacher and students occupy different physical spaces, yet participate in a shared instructional environment through screens, cameras, and networked media.
+                </figcaption>
+            </figure>
+
+            <ul>
+                <li>
+                    This example clarifies telepresence by emphasizing how mediated co-presence can be produced even when participants are physically separated. Synchronous audio-visual channels allow instruction to unfold as shared time, where gestures, slides, and speech
+                    are coordinated across distance rather than anchored in one room.
+                </li>
+
+                <li>
+                    Certain classroom functions can be preserved—recognizing faces, hearing voices, following explanations—so that teaching remains socially organized around an audience. Telepresence works by maintaining enough continuity of perception and turn-taking to
+                    sustain the feeling of “being together” in a common session.
+                </li>
+
+                <li>
+                    At the same time, telepresence transforms attention and embodiment. Interaction is framed by cameras and screens, and participants manage presence through interfaces rather than through physical proximity. What counts as “participation” becomes tied to
+                    visibility, muting/unmuting, and interface-based signals.
+                </li>
+
+                <li>
+                    The larger point is that “being there” increasingly means being integrated into a communication system—visible, audible, and responsive—rather than sharing the same physical location. Telepresence thus shows how digital media redefine presence itself
+                    through network infrastructures.
+                </li>
+            </ul>
+
+            <h3>5.2 Virtual–Actual Hybridity</h3>
+            <p>
+                Many experiences now blend digital layers with physical space. Location-based games, augmented reality filters, and interactive installations overlay data onto streets, parks, and buildings.
+            </p>
+            <p>
+                Pokémon GO turned cities into playgrounds populated by invisible creatures. Navigation apps have quietly redefined how people move through and imagine their urban environment. It is increasingly difficult to separate what is “virtual” from what is “actual.”
+            </p>
+
+            <div class="example-label">Concept analysis :</div>
+            <ul>
+                <li>
+                    <strong>Definition and core idea.</strong> Virtual–actual hybridity describes situations where people remain physically located in everyday space, but their experience is continuously shaped by digital information and interfaces. Instead
+                    of “entering” a separate virtual world, we live inside mixed environments where physical presence and digital mediation operate at the same time.
+                </li>
+
+                <li>
+                    <strong>Example 1: navigation apps as hybrid urban experience.</strong> Consider everyday map navigation (e.g., Google Maps). The street is no longer interpreted only through memory or signage; it is re-framed by real-time data such
+                    as traffic intensity, estimated arrival time, and algorithmic route suggestions. In practice, the city becomes an interface: intersections become decision points guided by software, and “the best route” is defined by platform logic
+                    rather than embodied familiarity.
+                </li>
+
+                <li>
+                    <strong>Example 2: AR filters and the normalization of digital self-presentation.</strong> Social media filters overlay facial modifications or environmental graphics onto live camera feeds. When users rely on these filters in daily
+                    communication (short videos, video calls), the boundary between an “unmediated” face and a digitally optimized one becomes difficult to locate. Over time, hybrid visuals can reshape norms of beauty, authenticity, and what counts as
+                    a “presentable” self.
+                </li>
+
+                <li>
+                    <strong>Power and inequality in hybrid environments.</strong> Hybrid space is not neutral. Access to devices, connectivity, and platform literacy becomes a form of cultural and social power. People without reliable internet or appropriate
+                    devices experience the same physical space differently, because they cannot fully access the digital layer that increasingly organizes visibility, mobility, and opportunity.
+                </li>
+
+                <li>
+                    <strong>Why this matters for “cultural power.”</strong> Virtual–actual hybridity shows that digital media do not simply represent reality; they participate in producing it. When digital layers become routine, they quietly reshape what
+                    is noticeable, actionable, and valuable in everyday life—making cultural power operate through interfaces, data, and algorithmic guidance.
+                </li>
+            </ul>
+
+            <figure>
+                <img src="/1/4.jpg" alt="Augmented reality elements layered over a city scene" />
+                <figcaption>
+                    A city street in which AR annotations, game objects, or navigation cues float above the physical environment, representing the hybrid character of contemporary space and everyday wayfinding.
+                </figcaption>
+            </figure>
+
+            <h3>5.3 Hyperreality: When Images Recreate Reality</h3>
+
+            <p>
+                Hyperreality refers to situations in which representations do not merely reflect reality, but actively reshape how reality is perceived, experienced, and evaluated. In digital media environments, images often become more influential than the physical
+                world they supposedly depict. As a result, people may come to expect reality to conform to its mediated version, rather than the other way around.
+            </p>
+
+            <div class="example-label">Examples (expanded):</div>
+
+            <!-- Example 1 -->
+            <figure>
+                <img src="/1/20.jpg" alt="Filtered landscape photography comparison" />
+                <figcaption>
+                    Figure 5.3A — Filtered landscape photography and hyperreal aesthetics
+                </figcaption>
+            </figure>
+
+            <ul>
+                <li>
+                    When we compare unfiltered photographs of natural landscapes with heavily processed versions enhanced by long exposure, color grading, and dramatic contrast, we can see how digital techniques create a version of nature that appears smoother, brighter,
+                    and more emotionally charged than everyday perception. Water becomes silky, skies deepen into unreal blues, and crowds or imperfections disappear. These images do not simply document a place; they redesign it according to aesthetic
+                    expectations shaped by platforms and visual culture.
+                </li>
+                <li>
+                    This transformation contributes to hyperreality by setting a visual standard that physical reality can rarely meet. Visitors may arrive at scenic locations expecting the intensity and perfection of the image, only to feel disappointed or confused when
+                    the actual environment appears ordinary. In this sense, the image precedes and judges reality, reversing the traditional relationship between representation and experience.
+                </li>
+            </ul>
+
+            <!-- Example 2 -->
+            <figure>
+                <img src="/1/21.webp" alt="Game-like war imagery resembling cinematic or shooter aesthetics" />
+                <figcaption>
+                    Figure 5.3B — Game-like and cinematic aesthetics in representations of conflict
+                </figcaption>
+            </figure>
+
+            <ul>
+                <li>
+                    This example demonstrates another dimension of hyperreality, where real-world conflict is visually framed using the aesthetics of video games and action films. Lighting, composition, character positioning, and dramatic tension closely resemble promotional
+                    imagery from first-person shooters or Hollywood blockbusters. As a result, violence is presented less as a chaotic human tragedy and more as a stylized confrontation between heroic figures.
+                </li>
+                <li>
+                    Such representations blur the boundary between entertainment and reality. When war is visualized through familiar gaming and cinematic conventions, viewers may interpret real conflicts through narratives of competition, spectacle, and victory. Hyperreality
+                    becomes politically dangerous here, because it transforms lived suffering into an aesthetic experience, making it easier to consume, share, and even admire images of violence without fully confronting their real consequences.
+                </li>
+            </ul>
+
+        </section>
+
+        <!-- MEDIATED PLACE -->
+        <section id="mediated-place">
+            <span class="pill">Mediated Place</span>
+            <h2>6. Digital Media and Mediated Place</h2>
+
+            <h3>6.1 Rethinking “Place” in the Age of Geomedia</h3>
+            <p>
+                “Place” is not just a geographic location. It is a lived, meaningful environment shaped by memories, narratives, and social relations. Geomedia technologies — location-aware apps, AR experiences, and site-specific digital art — add new layers to this
+                process.
+            </p>
+            <p>
+                When we navigate with smartphones, tag locations on social media, or follow digital tours, our experience of place becomes mediated. The physical site and its digital representations intertwine: we see the landscape and the interface at the same time.
+            </p>
+
+            <h3>6.2 Site-Specific Digital Works</h3>
+
+            <h4>Dead Drops (Aram Bartholl)</h4>
+            <p>
+                <em>Dead Drops</em> embeds USB drives into public walls and buildings, inviting passers-by to plug in and exchange files offline. The city becomes an informal, decentralized file-sharing network. The work blurs online and offline, treating
+                the urban environment as a physical extension of peer-to-peer culture.
+            </p>
+
+            <h4>Skies Painted with Unnumbered Sparks (Janet Echelman & Aaron Koblin)</h4>
+            <p>
+                This large-scale suspended sculpture invites viewers to interact via mobile devices. Participants’ inputs shape light patterns across the woven net, turning the night sky into a collaborative canvas. Place becomes an event: a temporary convergence of
+                bodies, sensors, and networked signals.
+            </p>
+
+            <h4>BIG ❤ NYC (Bjarke Ingels Group)</h4>
+            <p>
+                A public installation that uses light and responsive design to visualize people’s presence and affection for the city. As visitors move and interact, their actions translate into changing illuminations, making the square feel like a responsive organism
+                rather than a static monument.
+            </p>
+
+            <h4>Homing (Jenna Burchell)</h4>
+            <p>
+                In <em>Homing</em>, visitors touch copper wires embedded in sculptural forms to trigger recorded sounds and stories. The gallery becomes a sensing environment in which human gestures “complete the circuit” of the artwork. The piece shows
+                how place can be produced through intimate, tactile encounters with media.
+            </p>
+
+            <figure>
+                <img src="/1/5.jpg" alt="Digital artworks embedded in public spaces collage" />
+                <figcaption>
+                    A collage featuring a USB in a wall (<em>Dead Drops</em>), an illuminated sky installation, a responsive urban square, and a close-up of a visitor touching a wired sculpture. Together, these images show how digital media can be woven
+                    into specific sites to create hybrid experiences of place.
+                </figcaption>
+            </figure>
+
+            <h3>6.3 Place, Power, and Participation</h3>
+            <p>
+                Mediated places are never neutral. Location-aware media can support more democratic forms of storytelling by foregrounding local voices, memories, and perspectives. They can also be used to promote purely commercial visions of a destination, erasing conflicts
+                and inequalities.
+            </p>
+            <p>
+                Participatory design approaches — where residents, artists, and researchers co-create digital experiences — try to make geomedia more socially and spatially sensitive. Instead of treating places as empty backdrops for tourism or branding, they emphasize
+                ongoing negotiations between past, present, and possible futures.
+            </p>
+        </section>
+
+        <!-- REFERENCES -->
+        <section id="references">
+            <span class="pill">Further Reading</span>
+            <h2>7. References (Suggested Readings for This Site)</h2>
+            <p>
+                The theoretical perspectives and examples in this site draw on a range of work in media studies, cultural studies, and critical internet research. Below are some key texts that can be cited or linked in the website:
+            </p>
+            <ul class="reference-list">
+                <li>
+                    Benjamin, W. (2008). <em>The Work of Art in the Age of Its Technological Reproducibility
+                and Other Writings on Media</em>. Harvard University Press.
+                </li>
+                <li>
+                    Deleuze, G., &amp; Guattari, F. (1987). <em>A Thousand Plateaus: Capitalism and Schizophrenia</em>. University of Minnesota Press.
+                </li>
+                <li>
+                    Jenkins, H. (2006). <em>Convergence Culture: Where Old and New Media Collide</em>. NYU Press.
+                </li>
+                <li>
+                    Jenkins, H. et al. (2006). <em>Confronting the Challenges of Participatory Culture:
+                Media Education for the 21st Century</em>.
+                </li>
+                <li>
+                    Livingstone, S. (2013). The participation paradigm in audience research.
+                    <em>The Communication Review</em>, 16(1–2), 21–30.
+                </li>
+                <li>
+                    Giraud, E. (2015). Subjectivity 2.0: Digital technologies, participatory media and communicative capitalism.
+                    <em>Subjectivity</em>, 8(2), 124–146.
+                </li>
+                <li>
+                    Bengtsson, L. R. et al. (2022). Digital media innovations through participatory action research: Interventions for digital place-based experiences. <em>Nordicom Review</em>, 43(2), 134–151.
+                </li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        Digital Media as Cultural Power &middot; Student Project Website
+    </footer>
+
+</body>
+
+</html>
